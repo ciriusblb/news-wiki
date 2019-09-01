@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>News Wiki</title>
+
+	<!-- Estylos de pagina-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+	<!-- script angular-->
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-ui-router.min.js"></script>
+	<script src="js/angular.mock.js"></script>
+	<script src="js/angular-resource.min.js"></script>
+	<script src="js/angular-messages.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.6.5/angular-locale_es-pe.min.js"></script>
+
+	<!-- Aplication script-->
+	<script src="app/app.js"></script>
+	<!-- Tiene que estar antes del bootstrap-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script src="js/mask.js"></script>
+	<script src="js/ui-bootstrap-tpls-2.5.0.min.js"></script>
+
+	<!-- Controllers-->
+	<script src="app/news/newsCtrl.js"></script>
+	<script src="app/categories/categoriesCtrl.js"></script>
+	<script src="app/news/newsDetailCtrl.js"></script>
+	<script src="app/news/newsEditCtrl.js"></script>
+
+	<!-- Services-->
+	<script src="common/services/common.servicesMock.js"></script>
+	<script src="common/services/common.services.js"></script>
+	<script src="common/services/categories/categoriesServices.js"></script>
+	<script src="common/services/news/newsResource.js"></script>
+
+
+</head>
+<body ng-app="newsWikiApp">
+   <nav class="navbar navbar-inverse">
+	  <div class="container">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#"><span class="title">News Wiki</span></a>
+
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li ui-sref-active="active"><a ui-sref="home">
+		           <i class="glyphicon glyphicon-home"></i></a>
+		        </li>
+		        <li ui-sref-active="active"><a ui-sref="newsList">Noticias</a></li>
+		        <li ui-sref-active="active"><a ui-sref="newsEdit.info ({idNoticia: 0})"><i class="glyphicon glyphicon-plus">Agregar Noticia</i></a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+	<div class="container">
+		<div ui-view >
+		 </div>
+	</div>
+</body>
+</html>

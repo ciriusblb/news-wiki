@@ -1,0 +1,14 @@
+<div class="row">
+	<div class="pull-left fecha">
+		{{vm.newsItem.fechaPublicacion | date:"EEEE, MMMM d, y"}}
+	</div>
+	<div id="newsBody">
+	    <h1> {{vm.newsItem.tituloNoticia}} </h1>
+		<img ng-src="{{vm.newsItem.banner}}" style="height: 300px;" >
+		<p>
+			{{vm.newsItem.descripcionNoticia}}
+		</p>
+		<h4>Tabs Relacionados</h4>
+		<p>{{vm.newsItem.tagList}}</p>
+	</div>
+</div>
